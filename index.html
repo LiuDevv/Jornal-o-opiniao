@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jornal O Opinião</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER FIXO -->
+   <!-- TICKER DE MANCHETES -->
+    <div class="ticker-wrapper">
+      <span class="ticker-label">ÚLTIMAS</span>
+      <div class="ticker-container">
+        <ul class="ticker-list" id="tickerList">
+          <li>Obras na Rua das Flores devem terminar em julho, diz prefeitura</li>
+          <li>Feira de artesanato volta ao bairro neste sábado</li>
+          <li>Nova linha de ônibus começa a operar na próxima semana</li>
+          <li>Moradores protestam contra fechamento do posto de saúde</li>
+          <li>Escola municipal recebe reforma completa após 10 anos</li>
+        </ul>
+      </div>
+    </div>
+
+  </header>
+  <header id="topo">
+    <div class="header-container">
+
+      <!-- MENU HAMBURGUER (mobile) -->
+      <button class="menu-toggle" id="menuToggle">&#9776; MENU</button>
+
+      <!-- LOGO / NOME -->
+      <div class="logo-area">
+        <h1 class="site-name">Jornal O Opinião</h1>
+      </div>
+
+      <!-- BOTÕES DIREITA -->
+      <div class="header-actions">
+        <button class="btn-header">&#128269; BUSCAR</button>
+        <button class="btn-header">&#128100; Entrar</button>
+      </div>
+
+    </div>
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav id="menuNav" aria-label="Menu principal">
+      <ul class="nav-list">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#noticias">Notícias</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#videos">Vídeos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- LINHA AMARELA DECORATIVA -->
+    <div class="header-linha"></div>
+
+  </header>
+
+  <!-- MAIN -->
+  <main id="conteudo-principal">
+    <!-- TICKER DE MANCHETES -->
+     <!-- SEÇÃO DE DESTAQUE -->
+<section id="inicio" class="container">
+  <div class="destaque-grid">
+    <!-- SEÇÃO DE EVENTOS -->
+<section id="eventos" class="container">
+  <h2 class="secao-titulo">Eventos do Bairro</h2>
+
+  <div class="eventos-grid">
+    <!-- SEÇÃO DE VÍDEOS -->
+<section id="videos" class="container">
+  <h2 class="secao-titulo">Vídeos</h2>
+
+  <div class="videos-grid">
+
+    <article class="video-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Revitalização da Praça Central"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="video-info">
+        <span class="categoria">OBRAS</span>
+        <h3>Revitalização da Praça Central: veja como vai ficar</h3>
+        <p class="data">02/04/2026</p>
+      </div>
+    </article>
+
+    <article class="video-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Festa Junina do Bairro"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="video-info">
+        <span class="categoria">CULTURA</span>
+        <h3>Festa Junina reúne centenas de moradores na praça</h3>
+        <p class="data">28/03/2026</p>
+      </div>
+    </article>
+
+    <article class="video-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Mutirão de vacinação"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="video-info">
+        <span class="categoria">SAÚDE</span>
+        <h3>Mutirão de vacinação atende mais de 500 pessoas em um dia</h3>
+        <p class="data">15/03/2026</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+    <article class="evento-card">
+      <div class="evento-data">
+        <span class="evento-dia">14</span>
+        <span class="evento-mes">JUN</span>
+      </div>
+      <div class="evento-info">
+        <span class="categoria">CULTURA</span>
+        <h3>Festa Junina da Associação de Moradores</h3>
+        <p>Praça Central do Bairro — 18h às 23h</p>
+      </div>
+    </article>
+
+    <article class="evento-card">
+      <div class="evento-data">
+        <span class="evento-dia">21</span>
+        <span class="evento-mes">JUN</span>
+      </div>
+      <div class="evento-info">
+        <span class="categoria">SAÚDE</span>
+        <h3>Mutirão de Vacinação Gratuita</h3>
+        <p>Posto de Saúde Central — 8h às 16h</p>
+      </div>
+    </article>
+
+    <article class="evento-card">
+      <div class="evento-data">
+        <span class="evento-dia">28</span>
+        <span class="evento-mes">JUN</span>
+      </div>
+      <div class="evento-info">
+        <span class="categoria">EDUCAÇÃO</span>
+        <h3>Feira de Ciências da Escola Municipal</h3>
+        <p>Escola Municipal do Bairro — 9h às 17h</p>
+      </div>
+    </article>
+
+    <article class="evento-card">
+      <div class="evento-data">
+        <span class="evento-dia">05</span>
+        <span class="evento-mes">JUL</span>
+      </div>
+      <div class="evento-info">
+        <span class="categoria">ESPORTE</span>
+        <h3>Torneio de Futebol Society do Bairro</h3>
+        <p>Campo do Clube Esportivo — 8h às 18h</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+    <!-- NOTÍCIA PRINCIPAL -->
+    <article class="noticia-principal">
+      <span class="categoria">PRINCIPAL</span>
+      <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80"
+           alt="Foto da notícia principal" />
+      <div class="noticia-principal-texto">
+        <p class="data">02/04/2026</p>
+        <h2>Prefeitura anuncia revitalização completa da Praça Central do bairro</h2>
+        <p class="subtitulo">Obras devem começar em julho e incluem novo playground, academia ao ar livre e paisagismo.</p>
+        <p class="autor">Por <strong>Redação O Opinião</strong> | 02/04/2026</p>
+      </div>
+    </article>
+        <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <!-- PREVISÃO DO TEMPO -->
+      <div class="sidebar-card">
+        <h4 class="sidebar-titulo">PREVISÃO DO TEMPO</h4>
+        <p class="cidade">Rio de Janeiro</p>
+        <p class="temperatura">32°</p>
+        <p class="chuva">Chuva: 56%</p>
+      </div>
+
+
+    <!-- NOTÍCIAS MENORES -->
+    <div class="noticias-menores">
+
+      <article class="noticia-card">
+        <img src="https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?w=400&q=80"
+             alt="Foto notícia 2" />
+        <div>
+          <span class="categoria">EDUCAÇÃO</span>
+          <h3>Escola municipal recebe reforma completa após 10 anos sem manutenção</h3>
+        </div>
+      </article>
+
+      <article class="noticia-card">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80"
+             alt="Foto notícia 3" />
+        <div>
+          <span class="categoria">SAÚDE</span>
+          <h3>Novo posto de saúde será inaugurado no próximo mês no bairro</h3>
+        </div>
+      </article>
+
+      <article class="noticia-card">
+        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&q=80"
+             alt="Foto notícia 4" />
+        <div>
+          <span class="categoria">TRÂNSITO</span>
+          <h3>Obras na Rua das Flores causam desvios e protestos de moradores</h3>
+        </div>
+      </article>
+
+    </div>
+
+      <!-- VEJA TAMBÉM -->
+      <div class="sidebar-card">
+        <h4 class="sidebar-titulo">VEJA TAMBÉM</h4>
+        <ul class="veja-tambem">
+          <li><a href="#">Feira de artesanato volta ao bairro neste sábado</a></li>
+          <li><a href="#">Nova linha de ônibus começa a operar na próxima semana</a></li>
+          <li><a href="#">Moradores organizam abaixo-assinado contra demolição</a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div>
+</section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
