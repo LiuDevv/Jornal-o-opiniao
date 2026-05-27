@@ -134,18 +134,20 @@ nav {
   font-family: var(--fonte-menu);
   font-size: 0.75rem;
   font-weight: bold;
-  padding: 0 16px;
+  padding: 0 12px;
   height: 100%;
   display: flex;
   align-items: center;
   white-space: nowrap;
   letter-spacing: 1px;
+  flex-shrink: 0;
 }
 
 .ticker-container {
   flex: 1;
   overflow: hidden;
   position: relative;
+  min-width: 0;
 }
 
 .ticker-list {
@@ -153,13 +155,15 @@ nav {
   display: flex;
   gap: 60px;
   white-space: nowrap;
-  animation: ticker-move 30s linear infinite;
+  animation: ticker-move 40s linear infinite;
+  width: max-content;
 }
 
 .ticker-list li {
   font-family: var(--fonte-menu);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--cor-texto);
+  flex-shrink: 0;
 }
 
 .ticker-list li::before {
@@ -168,10 +172,9 @@ nav {
 }
 
 @keyframes ticker-move {
-  0%   { transform: translateX(100%); }
+  0%   { transform: translateX(100vw); }
   100% { transform: translateX(-100%); }
 }
-
 /* ========================
    LAYOUT PRINCIPAL
 ======================== */
