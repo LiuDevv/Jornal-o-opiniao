@@ -15,7 +15,7 @@
   --cor-texto: #333333;
   --cor-texto-claro: #ffffff;
   --cor-borda: #dddddd;
-  --cor-vinho: #b3102c; /* Cor exata do botão Enviar Mensagem do print */
+  --cor-vinho: #b3102c;
   --fonte-principal: 'Georgia', serif;
   --fonte-menu: 'Arial', sans-serif;
 }
@@ -24,7 +24,7 @@ body {
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
   font-family: var(--fonte-principal);
-  padding-top: 155px; /* Ajustado para dar espaço ao header + ticker fixos */
+  padding-top: 155px;
 }
 
 /* ========================
@@ -112,15 +112,8 @@ nav {
   opacity: 0.7;
 }
 
-/* LINHA AMARELA */
-.header-linha {
-  height: 3px;
-  background-color: var(--cor-destaque);
-  width: 100%;
-}
-
 /* ========================
-   TICKER DE MANCHETES (ÚLTIMAS)
+   TICKER DE MANCHETES
 ======================== */
 .ticker-wrapper {
   background-color: var(--cor-card);
@@ -130,7 +123,7 @@ nav {
   overflow: hidden;
   height: 38px;
   position: fixed;
-  top: 114px; /* Fixado logo abaixo do menu */
+  top: 114px;
   width: 100%;
   z-index: 999;
 }
@@ -180,7 +173,7 @@ nav {
 }
 
 /* ========================
-   ESTRUTURA DE COLUNAS (LAYOUT PRINCIPAL)
+   LAYOUT PRINCIPAL
 ======================== */
 .container {
   max-width: 1100px;
@@ -190,7 +183,7 @@ nav {
 
 .main-layout {
   display: grid;
-  grid-template-columns: 1fr 300px; /* Coluna esquerda fluida, Sidebar fixa em 300px */
+  grid-template-columns: 1fr 300px;
   gap: 30px;
   align-items: start;
 }
@@ -250,7 +243,7 @@ nav {
   color: #888;
 }
 
-/* CATEGORIA COMPARTILHADA */
+/* CATEGORIA */
 .categoria {
   background: var(--cor-destaque);
   color: var(--cor-texto-claro);
@@ -289,7 +282,7 @@ nav {
 }
 
 /* ========================
-   SUBSEÇÃO VÍDEOS
+   VÍDEOS
 ======================== */
 .videos-grid {
   display: flex;
@@ -369,6 +362,41 @@ nav {
   border: 1px solid var(--cor-borda);
   border-radius: 4px;
   font-size: 0.9rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--cor-destaque);
+}
+
+/* ========================
+   VALIDAÇÃO — CAMPOS INVÁLIDOS
+======================== */
+.form-group input.invalido,
+.form-group select.invalido,
+.form-group textarea.invalido {
+  border-color: #cc0000;
+  background-color: #fff5f5;
+}
+
+.erro {
+  color: #cc0000;
+  font-size: 0.8rem;
+  min-height: 1rem;
+}
+
+.sucesso {
+  background: #e6f9ee;
+  color: #1a7a3e;
+  border: 1px solid #a3d9b8;
+  border-radius: 4px;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  margin-top: 8px;
 }
 
 .btn-enviar {
@@ -409,7 +437,9 @@ nav {
   line-height: 1.4;
 }
 
-/* CARDS DE EVENTOS (INFERIORES E SIDEBAR) */
+/* ========================
+   EVENTOS
+======================== */
 .eventos-cards-inferiores {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -463,7 +493,7 @@ nav {
 }
 
 /* ========================
-   BARRA LATERAL (SIDEBAR)
+   SIDEBAR
 ======================== */
 .sidebar {
   display: flex;
@@ -489,7 +519,6 @@ nav {
   margin-bottom: 12px;
 }
 
-/* Previsão do tempo */
 .previsao-tempo .cidade {
   font-size: 0.95rem;
   font-weight: bold;
@@ -509,7 +538,6 @@ nav {
   font-family: var(--fonte-menu);
 }
 
-/* Notícias Menores da Sidebar */
 .noticias-menores {
   display: flex;
   flex-direction: column;
@@ -541,15 +569,14 @@ nav {
   line-height: 1.3;
 }
 
-/* Ajuste específico para cards de eventos colocados na Sidebar */
 .card-sidebar-evento {
   padding: 12px;
 }
+
 .card-sidebar-evento .evento-dia {
   font-size: 1.3rem;
 }
 
-/* Seção Veja Também */
 .veja-tambem {
   list-style: none;
   display: flex;
@@ -576,7 +603,7 @@ nav {
 }
 
 /* ========================
-   FOOTER (RODAPÉ)
+   FOOTER
 ======================== */
 footer {
   background: #1a1a1a;
@@ -650,15 +677,49 @@ footer {
 }
 
 /* ========================
+   MENU HAMBURGUER — MOBILE
+======================== */
+@media (max-width: 850px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 8px 0;
+  }
+
+  #menuNav.active .nav-list {
+    display: flex;
+  }
+
+  .nav-list li a {
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 851px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* ========================
    RESPONSIVIDADE COMPLETA
 ======================== */
 @media (max-width: 850px) {
   body {
-    padding-top: 190px; /* Compensa o menu que quebra em mais linhas no mobile */
+    padding-top: 190px;
   }
 
   .main-layout {
-    grid-template-columns: 1fr; /* Sidebar vai para baixo do conteúdo */
+    grid-template-columns: 1fr;
   }
 
   .eventos-cards-inferiores {

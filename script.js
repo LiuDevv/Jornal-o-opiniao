@@ -5,10 +5,8 @@
   const list = document.getElementById('tickerList');
   if (!list) return;
 
-  // Duplica os itens no HTML para garantir que o carrossel do CSS não fique com buracos vazios
+  // Duplica os itens para garantir loop contínuo sem buracos
   list.innerHTML += list.innerHTML;
-  
-  // O movimento agora é controlado 100% pelo CSS para melhor performance e fluidez!
 })();
 
 // ===========================
@@ -19,11 +17,10 @@ const menuNav = document.getElementById('menuNav');
 
 if (menuToggle && menuNav) {
   menuToggle.addEventListener('click', () => {
-    // Alterna a classe para mostrar/esconder o menu no celular
     menuNav.classList.toggle('active');
   });
 
-  // Fecha o menu automaticamente ao clicar em qualquer link (bom para experiência do usuário)
+  // Fecha o menu ao clicar em qualquer link
   menuNav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       menuNav.classList.remove('active');
@@ -32,7 +29,7 @@ if (menuToggle && menuNav) {
 }
 
 // ===========================
-// VALIDAÇÃO DO FORMULÁRIO (MANTIDA E CONECTADA)
+// VALIDAÇÃO DO FORMULÁRIO
 // ===========================
 const form = document.getElementById('formContato');
 
