@@ -718,7 +718,34 @@ footer {
 ======================== */
 @media (max-width: 850px) {
   body {
-    padding-top: 190px;
+    padding-top: 200px;
+  }
+
+  .ticker-wrapper {
+    top: 130px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 8px 0;
+  }
+
+  #menuNav.active .nav-list {
+    display: flex;
+  }
+
+  .nav-list li a {
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
   }
 
   .main-layout {
@@ -735,17 +762,5 @@ footer {
 
   .footer-top {
     grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 550px) {
-  .footer-top {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
   }
 }
